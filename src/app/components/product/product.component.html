@@ -1,0 +1,95 @@
+<!-- <div class="container">
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group">
+      <button
+        type="button"
+        class="btn btn-outline-white btn-rounded btn-sm px-2"
+        (click)="addProduct()"
+      >
+        <i class="bi bi-plus-circle" style="font-size: 25px"></i>
+      </button>
+    </div>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Price</th>
+        <th scope="col">Photo</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let prod of products">
+      <tr>
+        <th scope="row">{{ prod.id }}</th>
+        <td>{{ prod.name }}</td>
+        <td>{{ prod.stock }}</td>
+        <td>{{ prod.price }}</td>
+        <td><img src="{{ prod.photo }}" /></td>
+        <td>
+          <button
+            type="button"
+            name="btn-success"
+            class="btn btn-link"
+            (click)="editProduct(prod.id)"
+          >
+            <i class="bi bi-pencil"></i>
+          </button>
+          <button
+            type="button"
+            name="btn-success"
+            class="btn btn-link"
+            (click)="deleteProduct(prod)"
+          >
+            <i class="bi bi-trash"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+<div class="container d-flex flex-row">
+  <div class="btn-toolbar" role="toolbar">
+    <div class="btn-group">
+      <button
+        type="button"
+        class="btn btn-outline-white btn-rounded btn-sm px-2"
+        (click)="addProduct()"
+      >
+        <i class="bi bi-plus-circle" style="font-size: 25px"></i>
+      </button>
+    </div>
+  </div>
+  <div *ngFor="let prod of products" class="card" style="width: 18rem">
+    <img
+      class="card-img-top"
+      src="{{ prod.photo }}"
+      height="200"
+      alt="Card image cap"
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ prod.name }}</h5>
+      <p class="card-text">Stock : {{ prod.stock }}</p>
+      <p class="card-text">Rp. {{ prod.price }}</p>
+      <button
+        type="button"
+        name="btn-success"
+        class="btn btn-link"
+        (click)="editProduct(prod.id)"
+      >
+        <i class="bi bi-pencil"></i>
+      </button>
+      <button
+        type="button"
+        name="btn-success"
+        class="btn btn-link"
+        (click)="deleteProduct(prod)"
+      >
+        <i class="bi bi-trash"></i>
+      </button>
+      <a href="#" class="btn btn-primary">Buy</a>
+    </div>
+  </div>
+</div>
