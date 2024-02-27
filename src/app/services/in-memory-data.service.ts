@@ -15,16 +15,14 @@ export class InMemoryDataService implements InMemoryDbService {
         name: 'Laptop',
         stock: 20,
         price: 7000000,
-        photo:
-          'https://e7.pngegg.com/pngimages/341/466/png-clipart-led-backlit-lcd-soundbar-television-set-4k-resolution-tv-led-television-blue.png',
+        photo: './assets/laptop.png',
       },
       {
         id: 2,
         name: 'Televisi',
         stock: 20,
         price: 5000000,
-        photo:
-          'https://dlcdnwebimgs.asus.com/gain/5d3b0e30-c888-481c-8c1c-f45b65c5b560/',
+        photo: './assets/tv.png',
       },
     ];
 
